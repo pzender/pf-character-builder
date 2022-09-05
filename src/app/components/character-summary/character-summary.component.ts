@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class CharacterSummaryComponent implements OnInit {
 
   constructor() { }
+  stats: string[] = ['STR', 'DEX', 'CON', 'INT', 'WIS', 'CHA']
 
   ngOnInit(): void {
   }

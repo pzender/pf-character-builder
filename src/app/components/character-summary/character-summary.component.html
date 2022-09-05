@@ -1,25 +1,13 @@
 <h1>Surion</h1>
-Elf
-Male
-Chaotic Good
+<div class="flex-justify">
+    <span>Elf</span>
+    <span>Male</span>
+    <span>Chaotic Good</span>
+    <span>Level 17</span>
+</div>
 
-<table>
-    <tr>
-        <td>STR</td><td>10</td><td>(base: 10)</td>
-    </tr>
-    <tr>
-        <td>DEX</td><td>16</td><td>(base: 10)</td>
-    </tr>
-    <tr>
-        <td>CON</td><td>14</td><td>(base: 10)</td>
-    </tr>
-    <tr>
-        <td>INT</td><td>24</td><td>(base: 10)</td>
-    </tr>
-    <tr>
-        <td>WIS</td><td>16</td><td>(base: 10)</td>
-    </tr>
-    <tr>
-        <td>CHA</td><td>30</td><td>(base: 10)</td>
+<table class="table">
+    <tr *ngFor = "let stat of stats">
+        <td>{{stat}}</td><td>12</td><td>+1</td><td>(base: 10)</td>
     </tr>
 </table>
