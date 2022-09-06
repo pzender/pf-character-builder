@@ -1,23 +1,40 @@
-<div class="container">
-  <div class="basics">
-    <app-character-summary></app-character-summary>
-    <app-character-attacks></app-character-attacks>
+<div class="container paper border border-primary child-borders row flex-edges">
+  <div class="col-4 col summary">
+    <div>
+      <app-character-summary></app-character-summary>
+    </div>
   </div>
-  <div class="details">
-    <nav class="detail-options">
-      <span><a (click)="setDetailedView('LEVELS')">Levels</a></span>
-      <span><a (click)="setDetailedView('GEAR')">Gear</a></span>
-      <span><a (click)="setDetailedView('SPELLS')">Spells</a></span>
+  <div class="col-8 col details">
+    <nav class="border border-2 border-bottom split-nav">
+      <div class="nav-brand">
+        <h4>Wizard 10 / Arcane Trickster 10</h4>
+      </div>
+      <div class="collapsible">
+        <input id="collapsible1" type="checkbox" name="collapsible1">
+        <label for="collapsible1">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </label>
+        <div class="collapsible-body">
+          <ul class="inline">
+            <li><a (click)="setTab('Levels')">Levels</a></li>
+            <li><a (click)="setTab('Gear')">Gear</a></li>
+            <li><a (click)="setTab('Spells')">Spells</a></li>
+          </ul>
+        </div>
+      </div>
     </nav>
-    <div *ngIf="this.view === 'LEVELS'">
-      <app-character-levels></app-character-levels>
+    <div>
+      <div *ngIf="this.currentTab === 'Levels'" class="scrollable">
+        <app-character-levels></app-character-levels>  
+      </div>
+      <div *ngIf="this.currentTab === 'Gear'" class="scrollable">
+        Gear
+      </div>
+      <div *ngIf="this.currentTab === 'Spells'" class="scrollable">
+        Spells
+      </div>
     </div>
-    <div *ngIf="this.view === 'GEAR'">
-      <app-character-gear></app-character-gear>
-    </div>
-    <div *ngIf="this.view === 'SPELLS'">
-      <app-character-spells></app-character-spells>
-    </div>
-
   </div>
 </div>

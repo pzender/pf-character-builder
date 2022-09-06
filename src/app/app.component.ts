@@ -7,9 +7,9 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'pf-character-builder';
-  view = 'LEVELS' // LEVELS / GEAR / SPELLS
+  currentTab = 'Levels' // LEVELS / GEAR / SPELLS
 
-  setDetailedView(view: string) {
-    this.view = view;
+  setTab(currentTab: string) {
+    this.currentTab = currentTab;
   }
 }

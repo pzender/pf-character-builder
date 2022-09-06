@@ -1,11 +1,39 @@
 /* You can add global styles to this file, and also import other style files */
-.flex-justify {
-    display: flex;
-    justify-content: space-around;
+@use 'node_modules/papercss/dist/paper.css';
+
+.container {
+    height: 90vh;
+    width: 85%;
+    max-width: 1280px;
+    margin: 2vh auto;
+    background-color: #fff3c9;
 }
 
-.table {
-    width: 100%;
-    table-layout: fixed;
-    text-align: center;
+// .summary {
+//     background-color: #fff3c9;
+// }
+
+.details {
+    // background-color: #fff3c9;
+    height: 82vh;
+    border-left: none;
+}
+
+.border-bottom {
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+nav {
+    background-color: transparent;
+}
+
+nav ul.inline li a {
+    font-size: 1rem;
+}
+
+.scrollable {
+    max-height: 72vh;
+    overflow-y: scroll;
 }
